@@ -1,19 +1,35 @@
+{
+  "installCommand": "gem install bundler",
+  "buildCommand": [
+    "bundle install",
+    "rails db:{drop,migrate,create}"
+  ],
+  "functions": "api/index.rb",
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Credentials", "value": "true" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
+        { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
+      ]
+    }
+  ]
+}
+// }
 // {
-//   "installCommand": "gem install bundler",
-//   "buildCommand": [
-//     "bundle install",
-//     "rails db:{drop,migrate,create}"
-//   ],
-//   "functions": "api/index.rb",
-//   "headers": [
+//   "version": 2,
+//   "builds": [
 //     {
-//       "source": "/api/(.*)",
-//       "headers": [
-//         { "key": "Access-Control-Allow-Credentials", "value": "true" },
-//         { "key": "Access-Control-Allow-Origin", "value": "*" },
-//         { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-//         { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
-//       ]
+//       "src": "./index.vercel.js",
+//       "use": "@vercel/node"
+//     }
+//   ],
+//   "routes": [
+//     {
+//       "src": "/(.*)",
+//       "dest": "/"
 //     }
 //   ]
 // }
