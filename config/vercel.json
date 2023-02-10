@@ -1,4 +1,9 @@
 {
+  "installCommand": [
+    "gem install bundler",
+    "bundle install",
+    "rails db:{drop,migrate,create}"
+  ],
   "functions": "api/index.rb",
   "headers": [
     {
