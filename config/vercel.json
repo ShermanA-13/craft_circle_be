@@ -1,5 +1,5 @@
 {
-  "functions": "pages/api/hello.js",
+  "functions": "api/index.rb",
   "headers": [
     {
       "source": "/api/(.*)",
