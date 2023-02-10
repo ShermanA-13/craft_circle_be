@@ -1,6 +1,6 @@
 {
-  "installCommand": [
-    "gem install bundler",
+  "installCommand": "gem install bundler",
+  "buildCommand": [
     "bundle install",
     "rails db:{drop,migrate,create}"
   ],
