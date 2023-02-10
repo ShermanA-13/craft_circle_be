@@ -1,6 +1,6 @@
 require 'cowsay'
 
-Handler = proc do |req, res|
+Handler = Proc.new do |req, res|
   name = req.query['name'] || 'World'
 
   res.status = 200
