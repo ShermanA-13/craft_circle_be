@@ -1,6 +1,5 @@
 {
   "functions": "pages/api/hello.js",
-  "framework": "rails",
   "headers": [
     {
       "source": "/api/(.*)",
