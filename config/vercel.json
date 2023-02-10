@@ -1,10 +1,12 @@
 {
-  "installCommand": "gem install bundler",
-  "buildCommand": [
-    "bundle install",
-    "rails db:{drop,migrate,create}"
-  ],
+
   "functions": "api/index.rb",
+      "version": 2,
+      "builds": [
+        "gem install bundler",
+        "bundle install",
+        "rails db:{drop,create,migrate}"
+    ],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -17,19 +19,3 @@
     }
   ]
 }
-// }
-// {
-//   "version": 2,
-//   "builds": [
-//     {
-//       "src": "./index.vercel.js",
-//       "use": "@vercel/node"
-//     }
-//   ],
-//   "routes": [
-//     {
-//       "src": "/(.*)",
-//       "dest": "/"
-//     }
-//   ]
-// }
